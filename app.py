@@ -6,8 +6,8 @@ app = FastAPI(title="Hall Model")
 
 @app.on_event("startup")
 def imload():
-  if not os.path.isdir("documents"):
-    config.unlock("documents")
+  if not os.path.isdir():
+    config.unlock()
 
 @app.get("/")
 def imroot():
